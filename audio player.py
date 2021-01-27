@@ -2,8 +2,15 @@ import discord
 from discord.ext import commands
 import youtube_dl
 import os
+import random
 
 client = commands.Bot(command_prefix="!")
+contador = 0
+numero = 10
+
+sujera = {"Kilfrox#7389": "Julin", "ChoroVendoAnime#4438": "Alê", "Brono#7259": "Brono",
+          "scorpiontaken#5498":"Pedro", "Jott4#2505":"João","Morfeu#6627": "Rods", "Pato#9781": "Juan",
+          "Terziotti#0546": "Gabriel", "homio#3764": "Czar"}
 
 @client.command()
 async def play(ctx, url : str):
@@ -68,4 +75,5 @@ async def stop(ctx):
     voice = discord.utils.get(client.voice_clients, guild=ctx.guild)
     voice.stop()
 
-client.run('Token')
+
+client.run('NjM0MDQ5NzIxMjU3ODIwMTcz.Xac20Q.uNzTai8VFTdNN_rb_maOH6C0Sts')

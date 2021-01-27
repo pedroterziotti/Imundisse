@@ -66,4 +66,4 @@ def uga(mensagem):
     return(final,numero)
 
 
-client.run('NjM0MDQ5NzIxMjU3ODIwMTcz.Xac20Q.oUZGCSac0TwwxhDkeONtsia6NOY')
+client.run('Token')

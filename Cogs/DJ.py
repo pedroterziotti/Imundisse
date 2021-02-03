@@ -38,10 +38,10 @@ class DJ(commands.Cog):
         for file in os.listdir("./"):
             if file.endswith(".mp3"):
                 os.rename(file, "musica.mp3")
-        voice.play(discord.FFmpegPCMAudio("musica.mp3"))
+        voice.play(discord.FFmpegPCMAudio("musica.mp3"), after = oi())
 
     @commands.command()
-    async def sair(self,ctx):
+    async def leave(self,ctx):
         voice = discord.utils.get(self.client.voice_clients, guild=ctx.guild)
         if voice.is_connected():
             await voice.disconnect()
@@ -66,6 +66,9 @@ class DJ(commands.Cog):
     async def stop(self,ctx):
         voice = discord.utils.get(self.client.voice_clients, guild=ctx.guild)
         voice.stop()
+
+def oi():
+    print('oi')
 
 def setup(client):
     client.add_cog(DJ(client))

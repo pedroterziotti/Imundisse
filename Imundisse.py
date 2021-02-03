@@ -10,4 +10,4 @@ for Cogs in os.listdir('./cogs'):
 
 
 
-client.run('Token')
+client.run('NjM0MDQ5NzIxMjU3ODIwMTcz.Xac20Q.DrRSeOdlxxtoKOdyJVIUbVvTpt4')

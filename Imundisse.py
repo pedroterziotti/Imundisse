@@ -2,7 +2,7 @@ from discord.ext import commands, tasks
 import os
 import discord
 import json
-
+import urllib
 with open('./variables.json') as file:
     variables = json.load(file)
 
@@ -23,9 +23,9 @@ for Cogs in os.listdir('./Cogs'):
     if Cogs.endswith('.py'):
         client.load_extension(f'Cogs.{Cogs[:-3]}')
 
-'''@tasks.loop(minutes=20) 
+@tasks.loop(minutes=28) 
 async def refresh():
-    urllib.request.urlopen('https://imundiss.herokuapp.com/')'''
+    urllib.request.urlopen('https://imun.herokuapp.com/')
 
 if __name__ == '__main__':
     #refresh.start()

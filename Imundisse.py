@@ -28,5 +28,5 @@ async def refresh():
     urllib.request.urlopen('https://imun.herokuapp.com/')
 
 if __name__ == '__main__':
-    #refresh.start()
+    refresh.start()
     client.run(variables['BOT_KEY'])

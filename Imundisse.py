@@ -25,7 +25,7 @@ for Cogs in os.listdir('./Cogs'):
 
 @tasks.loop(minutes=28) 
 async def refresh():
-    urllib.request.urlopen('https://imun.herokuapp.com/')
+    urllib.request.urlopen(variables['HEROKU_URL'])
 
 if __name__ == '__main__':
     refresh.start()
